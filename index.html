@@ -8,75 +8,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Linking Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Linking Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="style.min.css">
-    <!-- JavaScript -->
-    <script type="text/javascript" src="script.min.js"></script>
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
 
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col-10">
-                <h1>Tic Tac Toe</h1>
-            </div>
-            <div class="col-2">
-                <i title="Restart game." class="fas fa-undo-alt" onclick="location.reload()"></i>
-            </div>
+<header class="container">
+    <div class="row align-items-center">
+        <div class="col-10">
+            <h1>Tic Tac Toe</h1>
         </div>
-    </header>
+        <div class="col-2">
+            <i title="Restart game." class="fas fa-undo-alt" onclick="location.reload()"></i>
+        </div>
+    </div>
+</header>
 
-    <section class="container" id="table">
-        <div class="row">
-            <div class="col">
-                <!-- Instruction -->
-                <span id="instruction"></span>
+<section class="container" id="table">
+    <div class="row">
+        <div class="col">
+            <!-- Instruction -->
+            <span id="instruction"></span>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Buttons -->
+        <button class="col-4" id="btn_0_0" onclick="add(this)"></button>
+        <button class="col-4" id="btn_0_1" onclick="add(this)"></button>
+        <button class="col-4" id="btn_0_2" onclick="add(this)"></button>
+        <button class="col-4" id="btn_1_0" onclick="add(this)"></button>
+        <button class="col-4" id="btn_1_1" onclick="add(this)"></button>
+        <button class="col-4" id="btn_1_2" onclick="add(this)"></button>
+        <button class="col-4" id="btn_2_0" onclick="add(this)"></button>
+        <button class="col-4" id="btn_2_1" onclick="add(this)"></button>
+        <button class="col-4" id="btn_2_2" onclick="add(this)"></button>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col">
+            <!-- Response -->
+            <span id="res"></span>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <!-- Scoreboard -->
+        <div class="col">
+            <div class="row justify-content-around" id="rowPtX">
+                <span id="spanPtX">X</span>
+                <span id="spanPtO">O</span>
+            </div>
+            <div class="row justify-content-around" id="rowPtO">
+                <input type="text" id="ptX" value="0" readonly/>
+                <input type="text" id="ptO" value="0" readonly/>
             </div>
         </div>
-        <div class="row">
-            <!-- Buttons -->
-            <button class="col-4" id="btn_0_0" onclick="add(this)"></button>
-            <button class="col-4" id="btn_0_1" onclick="add(this)"></button>
-            <button class="col-4" id="btn_0_2" onclick="add(this)"></button>
-            <button class="col-4" id="btn_1_0" onclick="add(this)"></button>
-            <button class="col-4" id="btn_1_1" onclick="add(this)"></button>
-            <button class="col-4" id="btn_1_2" onclick="add(this)"></button>
-            <button class="col-4" id="btn_2_0" onclick="add(this)"></button>
-            <button class="col-4" id="btn_2_1" onclick="add(this)"></button>
-            <button class="col-4" id="btn_2_2" onclick="add(this)"></button>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section class="container">
-        <div class="row">
-            <div class="col">
-                <!-- Response -->
-                <span id="res"></span>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <div class="row">
-            <!-- Scoreboard -->
-            <div class="col">
-                <div class="row justify-content-around" id="rowPtX">
-                    <span id="spanPtX">X</span>
-                    <span id="spanPtO">O</span>
-                </div>
-                <div class="row justify-content-around" id="rowPtO">
-                    <input type="textView" id="ptX" value="0" readonly=“true” />
-                    <input type="textView" id="ptO" value="0" readonly=“true” />
-                </div>
-            </div>
-        </div>
-    </section>
-
+<!-- JavaScript -->
+<script src="script.min.js"></script>
 </body>
 
 </html>

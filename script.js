@@ -9,6 +9,7 @@ window.onload = function getScreen() {
     }
 }
 var player;
+
 /** Click event */
 function add(btn) {
     /** Checks if the button is already clicked */
@@ -20,13 +21,13 @@ function add(btn) {
         document.getElementById("res").innerHTML = "";
         /** Check the player */
         if (player == "" || player == "O") {
-            btn.innerHTML = "O";
+            btn.innerHTML = "<span class='o'>O</span>";
             check();
             player = "X";
             /** Switches the intruction message to the player X */
             document.getElementById('instruction').innerHTML = "Player time <strong>" + player + "</strong>.";
         } else {
-            btn.innerHTML = "X";
+            btn.innerHTML = "<span class='x'>X</span>";
             check();
             player = "O";
             /** Switches the intruction message to the player O */
@@ -34,6 +35,7 @@ function add(btn) {
         }
     }
 }
+
 /** Check if the game is over */
 function check() {
     if (idValue(0, 0) != "" && idValue(0, 0) == idValue(0, 1) && idValue(0, 1) == idValue(0, 2) ||
@@ -77,11 +79,13 @@ function check() {
         clear();
     }
 }
+
 /** Function that returns the IDs of each button */
 function idValue(i, j) {
     var id = document.getElementById("btn_" + i + "_" + j);
     return id.innerText;
 }
+
 /** Clean the buttons */
 function clear() {
     for (var i = 0; i <= 2; i++) {
